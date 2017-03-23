@@ -4,8 +4,8 @@ FROM node:7.4-alpine
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories \
  && apk update && apk upgrade \
  && apk add git python make g++ wget tar curl \
- && wget -P /tmp --quiet https://yarnpkg.com/latest.tar.gz; tar zxf /tmp/latest.tar.gz -C /tmp; rm /tmp/latest.tar.gz \
+ && wget -P /yarn --quiet https://yarnpkg.com/latest.tar.gz; tar zxf /yarn/latest.tar.gz -C /yarn; rm /yarn/latest.tar.gz \
  && rm -rf /var/cache/apk/*
 
 # Set path to yarn
-ENV PATH /tmp/dist/bin:$PATH
+ENV PATH /yarn/dist/bin:$PATH
