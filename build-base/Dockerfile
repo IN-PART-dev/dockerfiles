@@ -1,4 +1,4 @@
-FROM node:7.4-alpine
+FROM node:7.9-alpine
 
 # Install updates & dependencies
 RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories \
