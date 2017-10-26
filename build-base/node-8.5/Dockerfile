@@ -13,5 +13,6 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repos
       curl \
       gzip \
       jq \
+      bash \
  && rm -rf /var/cache/apk/* \
  && yarn global add lerna@2.4
