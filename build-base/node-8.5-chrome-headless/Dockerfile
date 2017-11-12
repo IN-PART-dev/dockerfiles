@@ -3,7 +3,9 @@ FROM node:8.5
 # Install fonts
 COPY ./bin/fonts ./fonts
 RUN mkdir -p /usr/share/fonts/truetype/helvetica \
- && cp -R ./fonts/* /usr/share/fonts/truetype/helvetica \
+ && mkdir -p /usr/share/fonts/truetype/lato \
+ && cp -R ./fonts/helvetica/* /usr/share/fonts/truetype/helvetica \
+ && cp -R ./fonts/lato/* /usr/share/fonts/truetype/lato \
  && fc-cache -fv
 
 # Install chrome dependencies
