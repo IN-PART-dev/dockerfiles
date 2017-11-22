@@ -2,8 +2,8 @@ FROM node:8.5
 
 # Install fonts
 COPY ./bin/fonts ./fonts
-RUN mkdir -p /usr/share/fonts/truetype/helvetica \
- && cp -R ./fonts/* /usr/share/fonts/truetype/helvetica \
+ && mkdir -p /usr/share/fonts/truetype/roboto \
+ && cp -R ./fonts/roboto/* /usr/share/fonts/truetype/roboto \
  && fc-cache -fv
 
 # Install chrome dependencies
