@@ -6,6 +6,7 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repos
  && apk add \
       git \
       python \
+      py-pip \
       make \
       g++ \
       wget \
@@ -16,4 +17,5 @@ RUN echo "http://dl-cdn.alpinelinux.org/alpine/edge/community" >> /etc/apk/repos
       bash \
       rsync \
  && rm -rf /var/cache/apk/* \
- && yarn global add lerna@2.9
+ && yarn global add lerna@2.9 \
+ && pip install awscli
